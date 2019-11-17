@@ -1,0 +1,47 @@
+.app-header {
+  grid-area: header;
+  background-color: lightblue;
+}
+
+.app-sidebar {
+  grid-area: sidebar;
+}
+
+.app-content {
+  grid-area: content;
+  align-items: stretch;
+}
+
+.app-search {
+  grid-area: search;
+  background-color: #999;
+}
+
+.grid-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  /* grid-gap: 5px; */
+  justify-content: center;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 60px 50px auto;
+}
+
+.grid-container-login {
+  grid-template-areas: 
+  "header header header header header"
+  "search search search search search"
+  "sidebar content content content content";
+}
+
+.grid-container-logoff {
+  grid-template-areas: 
+  "header header header header header"
+  "search search search search search"
+  "content content content content content";
+}
+
+.app-container {
+  /* border-radius: 5px; */
+  padding: 5px 10px;
+}

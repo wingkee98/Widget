@@ -1,0 +1,35 @@
+.header-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .header-text {
+    color: white;
+    width: 200px;
+    white-space: nowrap;
+    margin: -5px 0 0 20px;
+  }
+  .nav-container {
+    width: 100%;
+  }
+  ul {
+    list-style-type: none;
+    float: right;
+  }
+  li {
+    float: left;
+    width: 110px;
+    text-align: center;
+  }
+  .nav-item {
+    text-align: center;
+    text-decoration-line: none;
+    color: orange;
+  }
+  .nav-item:hover {
+    color: white;
+    cursor: pointer
+  }
+  .active-link {
+    color: white;
+    text-decoration-line: underline;
+  }

@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import './index.scss';
+import './App.scss';
+import AppHeader from './components/header/header.component';
+import AppSearch from './components/search/search.component';
+import AppSidebar from './components/sidebar/sidebar.component';
+import AppContent from './components/contents/contents.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="grid-container grid-container-login">
+        <div className="app-container app-header">
+          <AppHeader />
+        </div>
+        <div className="app-container app-search">
+          <AppSearch />
+        </div>
+        <div className="app-container app-sidebar">
+          <AppSidebar />
+        </div>
+        <div className="app-container app-content">
+          <AppContent />
+        </div>
+      </div>
+    </Router>
   );
 }
 
