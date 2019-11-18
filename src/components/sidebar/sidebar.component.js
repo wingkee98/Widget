@@ -11,16 +11,7 @@ class AppSidebar extends React.Component {
         this.getWidgetData = this.getWidgetData.bind(this);
     }
 
-    getDerivedStateFromProps(props, state) {
-        return { widgets : props.widgetData };
-    }
-
-    shouldComponentUpdate(prvPros, prvState) {
-        return true;
-    }
-
     getWidgetData(value) {
-        console.log('widget selected ' + value);
         AppService.setSelectedWidgetId(value);
         console.log('thie price is ' + AppService.getSelectedWidget(value).price);
     }
