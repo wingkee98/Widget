@@ -2,39 +2,38 @@ import React from 'react';
 
 import './sidebar.component.scss';
 import SideWidgetComponent from './side-widget.component';
+import AppService from './../../app.service';
+import App from '../../App';
 
 class AppSidebar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            widgets : [
-                {
-                    id: 1,
-                    price: 750
-                },
-                {
-                    id: 2,
-                    price: 240
-                },
-                {
-                    id: 3,
-                    price: 500
-                },
-                {
-                    id: 4,
-                    price: 900
-                },
-                {
-                    id: 5,
-                    price: 800
-                }
-            ]
-        }
+        this.getWidgetData = this.getWidgetData.bind(this);
     }
+
+    getDerivedStateFromProps(props, state) {
+        return { widgets : props.widgetData };
+    }
+
+    shouldComponentUpdate(prvPros, prvState) {
+        return true;
+    }
+
+    getWidgetData(value) {
+        console.log('widget selected ' + value);
+        AppService.setSelectedWidgetId(value);
+        console.log('thie price is ' + AppService.getSelectedWidget(value).price);
+    }
+
     render() {
-        return this.state.widgets.map(widget => {
-            return <SideWidgetComponent key={widget.id} widget={widget} />
-        })
+        return (
+            <div className="sidebar-container">
+                {this.props.widgetData.map(widget => {
+                    return <SideWidgetComponent key={widget.id} widget={widget} sendData={this.getWidgetData} />
+                })}
+            </div>
+        )
+        
     }
 }
 

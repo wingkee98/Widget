@@ -14,7 +14,6 @@
 
 .app-search {
   grid-area: search;
-  background-color: #999;
 }
 
 .grid-container {
@@ -23,7 +22,7 @@
   display: grid;
   /* grid-gap: 5px; */
   justify-content: center;
-  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 25% 15% 20% 20% 20%;
   grid-template-rows: 60px 50px auto;
 }
 
@@ -35,10 +34,10 @@
 }
 
 .grid-container-logoff {
+  grid-template-rows: 60px auto;
   grid-template-areas: 
   "header header header header header"
-  "search search search search search"
-  "content content content content content";
+  "sidebar content content content content";
 }
 
 .app-container {

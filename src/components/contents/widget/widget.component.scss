@@ -1,0 +1,48 @@
+.widget-container {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    height: 100%;
+    padding: 15px 15px;
+    overflow-y: auto;
+}
+
+.widget-header {
+    margin: 0 0 10px 0;
+}
+
+.widget-body {
+    border: 1px solid grey;
+    height: 250px;
+    width: 70%;
+    margin: 0 auto 0 auto;
+    background-color: lightgrey;
+}
+
+div.widget-seperator {
+    margin: 20px 0;
+    border-top: 1px solid lightgrey;
+}
+
+.widget-speci {
+    margin-left: 20px;
+}
+
+.widget-speci-val{
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    color: grey;
+    font-size: larger;
+}
+.widget-speci-text{
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    color: grey;
+    font-size: large;
+}
+.widget-description {
+    margin: 15px 50px;
+    color: grey;
+}
